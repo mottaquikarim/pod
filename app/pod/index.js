@@ -1,9 +1,13 @@
 // lib
 const configs = require('./configs')
 const {connect, fetchPages} = require('./connectTable')
+const {generatePayload, postToSlack} = require('./connectSlack')
 
 // extract airtable data
 const {airtable} = configs;
+
+// extract slack data
+const {slack} = configs;
 
 // webtask context execution
 module.exports = (context, cb) => {
