@@ -1,0 +1,16 @@
+{
+  "name": "potd",
+  "version": "1.0.0",
+  "description": "Daily, automated problem of the day slack notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mottaqui Karim",
+  "license": "ISC",
+  "dependencies": {
+    "airtable": "^0.5.1",
+    "moment": "^2.20.1",
+    "superagent": "^3.8.2"
+  }
+}
