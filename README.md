@@ -18,6 +18,11 @@ Simple serverless script that will post a practice problem to a prespecified sla
 * Easily deployable to Webtask itself.
 * Fire and forget, easy to resuse.
 
+## Example [Airtable Base](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)
+
+<iframe class="airtable-embed" src="https://airtable.com/embed/shr3P5RqRDz747vG4?backgroundColor=cyan" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
+
+
 ## TODOS
 
 * Better test coverage
