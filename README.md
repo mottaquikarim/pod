@@ -22,7 +22,7 @@ Simple serverless script that will post a practice problem to a prespecified sla
 
 **[Airtable Base](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)**
 
-[![scrnshot](https://github.com/mottaquikarim/remotecontrol/blob/master/assets/pod-scrnshot.png?raw=true)](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)
+[![scrnshot](https://github.com/mottaquikarim/remotecontrol/blob/master/assets/pod-scrnshot2.png?raw=true)](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)
 
 
 ## TODOS
