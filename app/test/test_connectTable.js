@@ -1,11 +1,9 @@
 const {test} = require('ava');
-const Airtable = require('airtable');
 const {connect, fetchPages} = require('../pod/connectTable')
+const {withEnvParam} = require('./helpers/withEnv')
 const {airtable} = ((at) => Object.assign(at, {
     baseKey: 'appy3yLRvrVArKmhJ',
 }))(require('../pod/configs'))
-
-const withEnvParam = (name, msg, cb) => process.env[name] ? test(msg, cb) : test.skip(msg, cb);
 
 test('apiKey, conf must be passed in to connect', t => {
     const a = connect(null, null);
