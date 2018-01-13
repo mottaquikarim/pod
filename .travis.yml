@@ -6,6 +6,7 @@ install:
   - npm install
 before_script:
   - export COVERAGE_TOKEN=$COVERAGE_TOKEN
+  - export AIRTABLE_TEST_API_KEY=$AIRTABLE_TEST_API_KEY
 script:
   - npm run write-coveralls
   - npm test
