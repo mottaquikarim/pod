@@ -4,7 +4,9 @@
   "description": "Daily, automated problem of the day slack notifications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "write-coveralls": "rm -f .coveralls.yml && echo \"repo_token:$COVERAGE_TOKEN\" >> .coveralls.yml",
+    "test-ava": "$(npm bin)/ava",
+    "test": "$(npm bin)/nyc $(npm bin)/ava && $(npm bin)/nyc report --reporter=text-lcov | $(npm bin)/coveralls"
   },
   "author": "Mottaqui Karim",
   "license": "ISC",
@@ -12,5 +14,10 @@
     "airtable": "^0.5.1",
     "moment": "^2.20.1",
     "superagent": "^3.8.2"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "coveralls": "^3.0.0",
+    "nyc": "^11.4.1"
   }
 }
