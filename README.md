@@ -24,6 +24,8 @@ Simple serverless script that will post a practice problem to a prespecified sla
 
 [![scrnshot](https://github.com/mottaquikarim/remotecontrol/blob/master/assets/pod-scrnshot2.png?raw=true)](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)
 
+This is a **readonly** base that demonstrates how the data should be organized. It is strongly recommended that you **copy** the base as a starting point to ensure data-types are presevered.
+
 
 ## TODOS
 
