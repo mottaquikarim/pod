@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/mottaquikarim/pod.svg?branch=master)](https://travis-ci.org/mottaquikarim/pod) [![Coverage Status](https://coveralls.io/repos/github/mottaquikarim/pod/badge.svg?branch=master)](https://coveralls.io/github/mottaquikarim/pod?branch=master)
 # Problem of the Day
 
 *🎉🎈🎂🍾🎊🍻💃*
@@ -17,6 +18,15 @@ Simple serverless script that will post a practice problem to a prespecified sla
 * Configurable CRON support for daily, bi-weekly, weekly, etc post frequency.
 * Easily deployable to Webtask itself.
 * Fire and forget, easy to resuse.
+
+## AIRTABLE 
+
+**[Airtable Base](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)**
+
+[![scrnshot](https://github.com/mottaquikarim/remotecontrol/blob/master/assets/pod-scrnshot2.png?raw=true)](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)
+
+This is a **readonly** base that demonstrates how the data should be organized. It is strongly recommended that you **copy** the base as a starting point to ensure data-types are presevered.
+
 
 ## TODOS
 
