@@ -78,6 +78,9 @@ FMT=YYYY-MM-DD
 * `INDEXCOL` refers to the column that stores the dates for the problem of the day.
 * `DATACOL` is the column that will store all the data to be pushed through to slack.
 * `BASEKEY` refers to a key assigned by Airtable to the base. Pls refer to the figures below to track down your base key.
+* `AIRTABLE_API_KEY` super important, required to connect ot Airtable. Pls refer to the figure below to track down api key.
+
+#### AIRTABLE KEYS
 
 **STEP 1**: Find the '?' icon on the top right corner of the base view.
 ![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_icon.png?raw=true)
@@ -85,14 +88,16 @@ FMT=YYYY-MM-DD
 **STEP 2**: Click on the icon and then select the **API DOCUMENTATION** selection
 ![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_dropdown.png?raw=true)
 
-**Step 3**: On the top right of the page that opens, select the **show API Key** option
+**STEP 3**: On the top right of the page that opens, select the **show API Key** option
 ![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_API_KEY.png?raw=true)
+
+**STEP 4**: Scroll down to the **AUTHORIZATION** section to grab the pertinent info
+![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_sensitive_data.png?raw=true)
+In this case, **BASEKEY** is **appy3yLRvrVArKmhJ** and **AIRTABLE_API_KEY** is **YOUR_API_KEY**.
 
 * `VIEW` is a value that the airtable API requires, Keeping it around in case we wanted to change ever.
 * `FMT` airtable has a date picker column that seems to default to `YYYY-MM-DD`.
 * `MAXRECORDS` will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable.
-* `AIRTABLE_API_KEY` super important, required to connect ot Airtable. Pls refer to the figure below to track down api key.
-
 ```
 USERS=U85KT784S,U85N9D3V2
 MENSTIONSEP= or 
