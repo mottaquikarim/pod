@@ -73,6 +73,9 @@ FMT=YYYY-MM-DD
 | `DATACOL` | is the column that will store all the data to be pushed through to slack. |
 | `BASEKEY` | refers to a key assigned by Airtable to the base. Pls refer to the figures below to track down your base key. |
 | `AIRTABLE_API_KEY` | super important, required to connect ot Airtable. Pls refer to the figure below to track down api key. |
+| `VIEW` | is a value that the airtable API requires, Keeping it around in case we wanted to change ever. |
+| `FMT` | airtable has a date picker column that seems to default to `YYYY-MM-DD`. |
+| `MAXRECORDS` | will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable. |
 
 #### AIRTABLE KEYS
 
@@ -89,19 +92,14 @@ FMT=YYYY-MM-DD
 ![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_sensitive_data.png?raw=true)
 In this case, **BASEKEY** is **appy3yLRvrVArKmhJ** and **AIRTABLE_API_KEY** is **YOUR_API_KEY**.
 
-| SECRET NAME  | SECRET VALUE |
-| ------------- | ------------- |
-| `VIEW` | is a value that the airtable API requires, Keeping it around in case we wanted to change ever. |
-| `FMT` | airtable has a date picker column that seems to default to `YYYY-MM-DD`. |
-| `MAXRECORDS` | will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable. |
+#### SLACK
+
 ```
 USERS=U85KT784S,U85N9D3V2
 MENSTIONSEP= or 
 TEMPLATE=<!channel>: here is the *problem of the day* for today:\n\`\`\`\n$DATA\n\`\`\`\nRemember to hit up $MENTIONS (...or your classmates) to discuss! Goodluck!`,
 SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXXXXXXXX/XXXXXXXXXXX/XXXXXXXXXXX
 ```
-
-These are Slack specific items.
 
 | SECRET NAME  | SECRET VALUE |
 | ------------- | ------------- |
