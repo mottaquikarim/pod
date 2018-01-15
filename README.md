@@ -71,14 +71,13 @@ AIRTABLE_API_KEY=XXXXXXXXXXX
 FMT=YYYY-MM-DD
 ```
 
-* `TABLENAME` is the name of your table in a new airtable base. Essentially, a "base" is equivalent to a google spreadsheet. Each "table" is an individual view of that spreadsheet. You are free to name your table anything you want - just point to the correct label here. In the figure below, the name of the table is displayed on the tab.
-
-![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_TABLE_NAME%20EXAMPLE.png?raw=true)
-
-* `INDEXCOL` refers to the column that stores the dates for the problem of the day.
-* `DATACOL` is the column that will store all the data to be pushed through to slack.
-* `BASEKEY` refers to a key assigned by Airtable to the base. Pls refer to the figures below to track down your base key.
-* `AIRTABLE_API_KEY` super important, required to connect ot Airtable. Pls refer to the figure below to track down api key.
+| SECRET NAME  | SECRET VALUE |
+| ------------- | ------------- |
+| `TABLENAME`  | the name of your table in a new airtable base. Essentially, a "base" is equivalent to a google spreadsheet. Each "table" is an individual view of that spreadsheet. You are free to name your table anything you want - just point to the correct label here. |
+| `INDEXCOL` | refers to the column that stores the dates for the problem of the day. |
+| `DATACOL` | is the column that will store all the data to be pushed through to slack. |
+| `BASEKEY` | refers to a key assigned by Airtable to the base. Pls refer to the figures below to track down your base key. |
+| `AIRTABLE_API_KEY` | super important, required to connect ot Airtable. Pls refer to the figure below to track down api key. |
 
 #### AIRTABLE KEYS
 
@@ -95,9 +94,11 @@ FMT=YYYY-MM-DD
 ![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_sensitive_data.png?raw=true)
 In this case, **BASEKEY** is **appy3yLRvrVArKmhJ** and **AIRTABLE_API_KEY** is **YOUR_API_KEY**.
 
-* `VIEW` is a value that the airtable API requires, Keeping it around in case we wanted to change ever.
-* `FMT` airtable has a date picker column that seems to default to `YYYY-MM-DD`.
-* `MAXRECORDS` will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable.
+| SECRET NAME  | SECRET VALUE |
+| ------------- | ------------- |
+| `VIEW` | is a value that the airtable API requires, Keeping it around in case we wanted to change ever. |
+| `FMT` | airtable has a date picker column that seems to default to `YYYY-MM-DD`. |
+| `MAXRECORDS` | will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable. |
 ```
 USERS=U85KT784S,U85N9D3V2
 MENSTIONSEP= or 
@@ -107,10 +108,12 @@ SLACK_WEBHOOK=https://hooks.slack.com/services/XXXXXXXXXXX/XXXXXXXXXXX/XXXXXXXXX
 
 These are Slack specific items.
 
-* `USERS` refers to **actual** users that can be @-mentioned when problem of the day is pushed through. Ideally these users should be TAs or student reps (this is useful to tell students how to submit solutions to the problems of the day)
-* `MENTIONSSEP` refers to how the @-mentioned users are seperated, just formatting stuff mainly
-* `TEMPLATE` allows for editing how the problem of the day text is formatted. `$DATA` is the content read from Airtable's `DATACOL` column. `$MENTIONS` is an assembled list of `USERS` who will be @-mentioned. The `<!channel>` will call out to the entire channel. (Look at the **Variables** section **[here](https://api.slack.com/docs/message-formatting#message_formatting)**)
-* `SLACK_WEBHOOK` refers to slack incoming webhooks. Set that up **[here](https://api.slack.com/incoming-webhooks)**
+| SECRET NAME  | SECRET VALUE |
+| ------------- | ------------- |
+| `USERS` | refers to **actual** users that can be @-mentioned when problem of the day is pushed through. Ideally these users should be TAs or student reps (this is useful to tell students how to submit solutions to the problems of the day) |
+| `MENTIONSSEP` | refers to how the @-mentioned users are seperated, just formatting stuff mainly |
+| `TEMPLATE` | allows for editing how the problem of the day text is formatted. `$DATA` is the content read from Airtable's `DATACOL` column. `$MENTIONS` is an assembled list of `USERS` who will be @-mentioned. The `<!channel>` will call out to the entire channel. (Look at the **Variables** section **[here](https://api.slack.com/docs/message-formatting#message_formatting)**) |
+| `SLACK_WEBHOOK` | refers to slack incoming webhooks. Set that up **[here](https://api.slack.com/incoming-webhooks)** |
 
 ### DEPLOY
 
