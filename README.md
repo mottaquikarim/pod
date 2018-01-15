@@ -56,7 +56,9 @@ $ cd app/
 $ cp .secrets.txt.sample .secrets.txt
 ```
 
-Below, please find an explanation of what each key does:
+Below, please find an explanation of what each key does. **NOTE**: Not all are "secrets" per-se but for now easier to keep all in one place. 
+
+#### AIRTABLE
 
 ```
 TABLENAME=Problems
@@ -69,12 +71,23 @@ AIRTABLE_API_KEY=XXXXXXXXXXX
 FMT=YYYY-MM-DD
 ```
 
-These are Airtable specific items. Not all are "secrets" per-se but for now easier to keep all in one place. 
+* `TABLENAME` is the name of your table in a new airtable base. Essentially, a "base" is equivalent to a google spreadsheet. Each "table" is an individual view of that spreadsheet. You are free to name your table anything you want - just point to the correct label here. In the figure below, the name of the table is displayed on the tab.
 
-* `TABLENAME` is the name of your table in a new airtable base. Essentially, a "base" is equivalent to a google spreadsheet. Each "table" is an individual view of that spreadsheet. You are free to name your table anything you want - just point to the correct label here. In the figure above, the name of the table is displayed on the tab.
+![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_TABLE_NAME%20EXAMPLE.png?raw=true)
+
 * `INDEXCOL` refers to the column that stores the dates for the problem of the day.
 * `DATACOL` is the column that will store all the data to be pushed through to slack.
 * `BASEKEY` refers to a key assigned by Airtable to the base. Pls refer to the figures below to track down your base key.
+
+**STEP 1**: Find the '?' icon on the top right corner of the base view.
+![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_icon.png?raw=true)
+
+**STEP 2**: Click on the icon and then select the **API DOCUMENTATION** selection
+![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_dropdown.png?raw=true)
+
+**Step 3**: On the top right of the page that opens, select the **show API Key** option
+![Figure](https://github.com/mottaquikarim/pod/blob/master/assets/POD_help_API_KEY.png?raw=true)
+
 * `VIEW` is a value that the airtable API requires, Keeping it around in case we wanted to change ever.
 * `FMT` airtable has a date picker column that seems to default to `YYYY-MM-DD`.
 * `MAXRECORDS` will select only that many records in query. Not sure what the max queryable number is so we defaulted to 100, which seemed reasonable.
