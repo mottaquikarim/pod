@@ -5,11 +5,6 @@
 
 *Daily, automated problem of the day slack notifications.*
 
-In Webtask online editor, added `AIRTABLE_API_KEY` secret.
-CRON is set for: 48 0 * * *
-
-**[Airtable Sauce](https://airtable.com/appYuybi6kTNS0Gng/api/docs#nodejs/table:problems:list)**
-
 Simple serverless script that will post a practice problem to a prespecified slack channel daily. The daily portion is achieved with a configured CRON job on [Webtask](https://webtask.io/). This job will invoke a function that POSTs to a [Slack Incoming Webhook](https://api.slack.com/incoming-webhooks). Problems are managed via [Airtable](https://airtable.com/) which provides a robust API for reading data to be pushed through the pipes to the slack channel.
 
 ## FEATURES
