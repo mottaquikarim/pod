@@ -1,9 +1,23 @@
 const {test} = require('ava');
-const {connect, fetchPages} = require('../pod/connectTable')
-const {withEnvParam} = require('./helpers/withEnv')
-const {airtable} = ((at) => Object.assign(at, {
-    baseKey: 'appy3yLRvrVArKmhJ',
-}))(require('../pod/configs'))
+const {
+    generatePayload,
+    getConfigs,
+    connect,
+    fetchPages,
+} = require('../index');
+const {withEnvParam} = require('./helpers/withEnv');
+const {airtable, slack} = getConfigs({});
+// update basekey to point to temporary test key
+airtable.baseKey = 'appy3yLRvrVArKmhJ';
+
+test('message is formatted correctly', t => {
+    const str = generatePayload(slack, 'DATA_TST')
+    t.is(str, `<!channel>: here is the *problem of the day* for today:
+\`\`\`
+DATA_TST
+\`\`\`
+Remember to hit up <@U85KT784S> or <@U85N9D3V2> (...or your classmates) to discuss! Goodluck!`)
+})
 
 test('apiKey, conf must be passed in to connect', t => {
     const a = connect(null, null);
