@@ -13,8 +13,10 @@ Simple serverless script that will post a practice problem to a prespecified sla
 * Configurable CRON support for daily, bi-weekly, weekly, etc post frequency.
 * Easily deployable to Webtask itself.
 * Fire and forget, easy to resuse.
+* Once the script is up and running, actual content can be managed by one or many non-technical personnel.
+* Aims to be highly configurable...(not really sure if this has been achieved yet!)
 
-## AIRTABLE 
+## [AIRTABLE](https://www.airtable.com)
 
 **[Airtable Base](https://airtable.com/shr3P5RqRDz747vG4/tblfaahWqXucnCmOC/viwqQx6a4ZbiLz6R0)**
 
@@ -22,11 +24,19 @@ Simple serverless script that will post a practice problem to a prespecified sla
 
 This is a **readonly** base that demonstrates how the data should be organized. It is strongly recommended that you **copy** the base as a starting point to ensure data-types are presevered.
 
-## To build and deploy...
+## [SLACK](https://www.slack.com)
+
+Self explanatory, chatroom tool in use like...a lot. They've great API support! Super developer friendly! Great vehicle for practice content delivery.
+
+## [WEBTASK](https://www.webtask.io)
+
+Javascript focused serverless tool, very easy to configure and deploy. However, it is not meant to be used for more involved applications. Future iterations of this bot may **have** to migrate over to AWS Lambda for this reason.
+
+## BUILDING AND DEPLOYING
 
 There's a few steps required to deploy this script. Ideally, these steps could be made simpler - please submit PRs and ideas/issues around this!
 
-### Install-athon
+### INSTALLATION
 
 ```
 $ <git clone repo, cd into it>
@@ -36,11 +46,11 @@ $ npm install
 
 Everything is installed locally, so you will have to use `./node_modules/.bin/<script>` to run scripts. Yes, this is annoying. Yes, it is worth the pain.
 
-### Set up Web task
+### INIT WEBTASK
 
 If you don't have webtask CLI already set up, please do so now. **[Setting up Webtask CLI](https://webtask.io/docs/wt-cli)**.
 
-### Secrets
+### SECRETS
 
 In order to properly use this script, you will have to supply some scripts. In the `app/` directory you will see a `.secrets.txt.sample`.
 
