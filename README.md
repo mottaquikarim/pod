@@ -24,6 +24,14 @@ Simple serverless script that will post a practice problem to a prespecified sla
 
 This is a **readonly** base that demonstrates how the data should be organized. It is strongly recommended that you **copy** the base as a starting point to ensure data-types are presevered.
 
+### Additional Base Types
+
+Using only bases and the CRON schedule, it is possible to apply this project towards pushing automated messages to a channel via date only. Find below some other template bases that can be leveraged for common class tasks.
+
+* **[Lecture Base](https://airtable.com/shrr6orWt0NGfMRSd/tbligAtlC6W5iZeET/viwtWXizg8DbGWYHh)**. Used to push common lecture info every Tues/Thursday before class begins.
+
+
+
 ## [SLACK](https://www.slack.com)
 
 Self explanatory, chatroom tool in use like...a lot. They've great API support! Super developer friendly! Great vehicle for practice content delivery.
