@@ -12,11 +12,15 @@ airtable.baseKey = 'appy3yLRvrVArKmhJ';
 
 test('message is formatted correctly', t => {
     const str = generatePayload(slack, 'DATA_TST')
-    t.is(str, `<!channel>: here is the *problem of the day* for today:
-\`\`\`
-DATA_TST
-\`\`\`
-Remember to hit up <@U85KT784S> or <@U85N9D3V2> (...or your classmates) to discuss! Goodluck!`)
+    t.is(str.indexOf('DATA_TST') > -1, true)
+})
+
+
+test('message newlines are respected', t => {
+    const test_slack = Object.assign({}, slack);
+    test_slack.template = '\\n foobar'
+    const str = generatePayload(slack, 'DATA_TST')
+    t.is(str.indexOf('\n') > -1, true)
 })
 
 test('apiKey, conf must be passed in to connect', t => {

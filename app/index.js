@@ -8,6 +8,7 @@ const generatePayload = (conf, data) => {
     const {users,template,mentionSep} = conf;
     const mentions = users.map(user => `<@${user}>`).join(mentionSep || ' or ');
     const tform = template
+        .replace(/\\n/g, '\n')
         .replace(/\$DATA/g, data)
         .replace(/\$MENTIONS/g, mentions);
     return tform;
@@ -83,10 +84,9 @@ const getConfigs = (secrets = {}) => ({
     },
     slack: {
         users: (secrets.USERS && secrets.USERS.split(',')) || ['U85KT784S', 'U85N9D3V2'],
-        template: `<!channel>: here is the *problem of the day* for today:
+        template: (secrets.TEMPLATE) || `<!channel>: here is the *problem of the day* for today:
 \`\`\`
-$DATA
-\`\`\`
+$DATA \`\`\`
 Remember to hit up $MENTIONS (...or your classmates) to discuss! Goodluck!`,
         mentionSep: secrets.MENTIONSEP || ' or ',
     },
